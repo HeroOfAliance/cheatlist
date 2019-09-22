@@ -11,7 +11,7 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 *good replacement for the standard mac terminal [link](https://www.iterm2.com/)* <br>
 
 ## install command line completion
-[link](https://docs.docker.com/compose/completion/) <br>
+ * absolutely necessary thing [link](https://docs.docker.com/compose/completion/)* <br>
 
 ## install some tools on ubuntu image
 *update apt-get index* <br>
@@ -24,7 +24,7 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 `apt-get install iputils-ping` <br>
 
 ## basic 
-*print version of installed docker client and server* <br>
+*print versions of installed docker client and server* <br>
 `docker version` <br>
 *print docker configuration* <br>
 `docker info` <br>
