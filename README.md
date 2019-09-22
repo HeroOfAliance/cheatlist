@@ -14,7 +14,7 @@ https://www.iterm2.com/
 https://docs.docker.com/compose/completion/ <br>
 
 ## install some tools on ubuntu image
-*update apt-get __index__* <br>
+*update apt-get index* <br>
 `apt-get update` <br>
 *install __curl__* <br>
 `apt-get install curl` <br>
@@ -67,21 +67,21 @@ https://docs.docker.com/compose/completion/ <br>
 `docker image rm centos ubuntu nginx` <br>
 
 ## network
-** <br>
+*get a list of all networks* <br>
 `docker network ls` <br>
-** <br>
+*get configuraion of the network with name __bridge__ (in addition contains a list of connected containers)* <br>
 `docker network inspect bridge` <br>
-** <br>
+*create new network with name __my_network__ and default driver (bridge)* <br>
 `docker network create my_network` <br>
-** <br>
+*connect container __webhost__ to the __my_network__* <br>
 `docker network connect my_network webhost` <br>
-** <br>
+*connect container __webhost_1__ to the __my_network__ and assign alias __webhost__ to the container* <br>
 `docker network connect --alias webhost my_network webhost_1` <br>
-** <br>
-`docker network disconnect my_network webhost` <br>
-** <br>
+*disconnect container __webhost_1__ from the __my_network__* <br>
+`docker network disconnect my_network webhost_1` <br>
+*run container __webhost_1__ and connect it to the __my_network__ (will be connected to the __my_network__ only)* <br>
 `docker container run -d --name webhost_1 --network my_network nginx:alpine` <br>
 `docker container run -d --name webhost_1 --net my_network nginx:alpine` <br>
-** <br>
+*ping container __webhost_2__ from the __webhost_1__* <br>
 `docker container exec webhost_1 ping webhost_2` <br>
 
