@@ -82,6 +82,8 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 *run container __webhost_1__ and connect it to the __my_network__ (will be connected to the __my_network__ only)* <br>
 `docker container run -d --name webhost_1 --network my_network nginx:alpine` <br>
 `docker container run -d --name webhost_1 --net my_network nginx:alpine` <br>
+*run container __webhost_1__ and connect it to the __my_network__ and assign alias __webhost__ to the container* <br>
+`docker container run -d --name webhost_1 --net my_network --net--alias webhost nginx:alpine` <br>
 *ping container __webhost_2__ from the __webhost_1__* <br>
 `docker container exec webhost_1 ping webhost_2` <br>
 
