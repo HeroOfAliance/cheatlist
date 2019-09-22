@@ -65,6 +65,10 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 `docker image ls` <br>
 *remove cached images __centos__, __ubuntu__ and __nginx__* <br>
 `docker image rm centos ubuntu nginx` <br>
+*print a list of layers of the __nginx:latest__ image* <br>
+`docker image history nginx:latest` <br>
+*print a metadata of the __nginx:latest__ image* <br>
+`docker image inspect nginx:latest` <br>
 
 ## network
 *get a list of all networks* <br>
