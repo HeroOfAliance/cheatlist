@@ -10,16 +10,24 @@ ununtu: https://docs.docker.com/install/linux/docker-ce/ubuntu/ <br>
 *good replacement for the standard mac terminal* <br>
 https://www.iterm2.com/
 
-
 ## install command line completion
 https://docs.docker.com/compose/completion/ <br>
 
+## install some tools on ubuntu image
+*update apt-get __index__* <br>
+`apt-get update` <br>
+*install __curl__* <br>
+`apt-get install curl` <br>
+*install __nslookup__* <br>
+`apt-get install dnsutils` <br>
+*install __ping__* <br>
+`apt-get install iputils-ping` <br>
+
 ## basic 
-*print version of the installed docker client and server* <br>
+*print version of installed docker client and server* <br>
 `docker version` <br>
 *print docker configuration* <br>
 `docker info` <br>
-
 
 ## container
 *run detached container with name __webhost__ from the __nginx__ image and forward __8080__ port of the host to the __80__ port of the container* <br>
@@ -51,8 +59,29 @@ https://docs.docker.com/compose/completion/ <br>
 `docker container run -it --name my_ubuntu ubuntu bash` <br>
 *run container from the __centos__ image, exec __curl__ command on the __google__, than exit and remove container* <br>
 `docker container run --rm centos curl https://www.google.com` <br>
+
 ## image
 *get list of pulled images* <br>
 `docker image ls` <br>
 *remove cached images __centos__, __ubuntu__ and __nginx__* <br>
 `docker image rm centos ubuntu nginx` <br>
+
+## network
+** <br>
+`docker network ls` <br>
+** <br>
+`docker network inspect bridge` <br>
+** <br>
+`docker network create my_network` <br>
+** <br>
+`docker network connect my_network webhost` <br>
+** <br>
+`docker network connect --alias webhost my_network webhost_1` <br>
+** <br>
+`docker network disconnect my_network webhost` <br>
+** <br>
+`docker container run -d --name webhost_1 --network my_network nginx:alpine` <br>
+`docker container run -d --name webhost_1 --net my_network nginx:alpine` <br>
+** <br>
+`docker container exec webhost_1 ping webhost_2` <br>
+
