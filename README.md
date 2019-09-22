@@ -69,6 +69,18 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 `docker image history nginx:latest` <br>
 *print a metadata of the __nginx:latest__ image* <br>
 `docker image inspect nginx:latest` <br>
+*tag official image of the __nginx:alpine__ as my own image __avalonxt/nginx:latest__* <br>
+`docker image tag nginx:alpine avalonxt/nginx:latest` <br>
+*tag my image __avalonxt/nginx:latest__ as  __avalonxt/nginx:develop__* <br>
+`docker image tag avalonxt/nginx:latest avalonxt/nginx:develop` <br>
+*login to the docker to be able to push images to the docker hub* <br>
+`docker login` <br>
+*push tag __avalonxt/nginx:latest__ to the docker hub (upload the image to my account on docker hub)* <br>
+`docker image push avalonxt/nginx:latest` <br>
+*logout from the docker to avoid compromising security* <br>
+`docker logout` <br>
+*pull image __avalonxt/nginx:latest__ from the docker hub* <br>
+`docker pull avalonxt/nginx:latest` <br>
 
 ## network
 *get a list of all networks* <br>
