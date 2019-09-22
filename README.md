@@ -24,6 +24,7 @@ https://docs.docker.com/compose/completion/ <br>
 ## container
 *run detached container with name __webhost__ from the __nginx__ image and forward __8080__ port of the host to the __80__ port of the container* <br>
 `docker container run --publish 8080:80 --detach --name webhost nginx` <br>
+`docker container run -p 8080:80 -d --name webhost nginx` <br>
 *print published ports for the __webhost__ container* <br>
 `docker container port webhost` <br>
 *view only running containers* <br>
@@ -53,3 +54,5 @@ https://docs.docker.com/compose/completion/ <br>
 ## image
 *get list of pulled images* <br>
 `docker image ls` <br>
+*remove cached images __centos__, __ubuntu__ and __nginx__* <br>
+`docker image rm centos ubuntu nginx` <br>
