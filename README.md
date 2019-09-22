@@ -61,7 +61,7 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 `docker container run --rm centos curl https://www.google.com` <br>
 
 ## image
-*get list of pulled images* <br>
+*get a list of pulled images* <br>
 `docker image ls` <br>
 *remove cached images __centos__, __ubuntu__ and __nginx__* <br>
 `docker image rm centos ubuntu nginx` <br>
