@@ -7,7 +7,7 @@ win:    https://docs.docker.com/docker-for-windows/install/ <br>
 ununtu: https://docs.docker.com/install/linux/docker-ce/ubuntu/ <br>
 
 ## iTerm2
-*good replacement for the stadart mac terminal* <br>
+*good replacement for the standard mac terminal* <br>
 https://www.iterm2.com/
 
 
@@ -24,6 +24,8 @@ https://docs.docker.com/compose/completion/ <br>
 ## container
 *run detached container with name __webhost__ from the __nginx__ image and forward __8080__ port of the host to the __80__ port of the container* <br>
 `docker container run --publish 8080:80 --detach --name webhost nginx` <br>
+*print published ports for the __webhost__ container* <br>
+`docker container port webhost` <br>
 *view only running containers* <br>
 `docler container ls` <br>
 *view all containers* <br>
