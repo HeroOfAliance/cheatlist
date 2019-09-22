@@ -36,7 +36,7 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 *print published ports for the __webhost__ container* <br>
 `docker container port webhost` <br>
 *view only running containers* <br>
-`docler container ls` <br>
+`docker container ls` <br>
 *view all containers* <br>
 `docker container ls -a` <br>
 *realtime resources monitor for all running containers* <br>
