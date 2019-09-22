@@ -3,16 +3,15 @@ my own docker cheats <br>
 please ping me if you find something really stupid here [mail](mailto:alan.dayne@gmail.com)
 
 ## get docker
-mac:    https://docs.docker.com/docker-for-mac/install/ <br>
-win:    https://docs.docker.com/docker-for-windows/install/ <br>
-ununtu: https://docs.docker.com/install/linux/docker-ce/ubuntu/ <br>
+* [mac](https://docs.docker.com/docker-for-mac/install/) 
+* [win](https://docs.docker.com/docker-for-windows/install/) 
+* [ununtu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## iTerm2
-*good replacement for the standard mac terminal* <br>
-https://www.iterm2.com/
+*good replacement for the standard mac terminal [link](https://www.iterm2.com/)* <br>
 
 ## install command line completion
-https://docs.docker.com/compose/completion/ <br>
+[link](https://docs.docker.com/compose/completion/) <br>
 
 ## install some tools on ubuntu image
 *update apt-get index* <br>
