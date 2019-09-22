@@ -1,5 +1,6 @@
-# doker_cheatlist
-my own docker cheats
+# Doker Cheatlist
+my own docker cheats <br>
+please ping me if you find something really stupid here [mail](mailto:alan.dayne@gmail.com)
 
 ## get docker
 mac:    https://docs.docker.com/docker-for-mac/install/ <br>
