@@ -110,16 +110,19 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 FROM debian:jessie 
 
 # setup environment
+# this statement is optional
 ENV SOME_VAR some_value
 
 # run bash or sh commands 
 # each RUN command is a layer, thats wry calls are joined with &&
+# this statement is optional
 RUN apt-get update \
     && apt-get install curl \
     && echo "curl installed"
 
 # expose port to the local docker network
 # you should -p to forward this port on host
+# this statement is optional
 EXPOSE 80 443
 
 # this command will be running on container start
