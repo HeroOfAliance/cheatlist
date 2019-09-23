@@ -103,3 +103,28 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 *ping container __webhost_2__ from the __webhost_1__* <br>
 `docker container exec webhost_1 ping webhost_2` <br>
 
+## docker file 
+
+``` dockerfile
+# define base image
+FROM debian:jessie 
+
+# setup environment
+ENV SOME_VAR some_value
+
+# run bash or sh commands 
+# each RUN command is a layer, thats wry calls are joined with &&
+RUN apt-get update \
+    && apt-get install curl \
+    && echo "curl installed"
+
+# expose port to the local docker network
+# you should -p to forward this port on host
+EXPOSE 80 443
+
+# this command will be running on container start
+# keep in mind, that only one command will be running
+# so if there more than one 
+CMD ["nginx", "-g", "daemon off;"]
+
+```
