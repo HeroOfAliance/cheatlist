@@ -8,10 +8,10 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 * [ununtu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## iTerm2
-*good replacement for the standard mac terminal [link](https://www.iterm2.com/)* <br>
+*good replacement for the standard mac terminal [link](https://www.iterm2.com/) * <br>
 
 ## install command line completion
- * absolutely necessary thing [link](https://docs.docker.com/compose/completion/)* <br>
+ *absolutely necessary thing [link](https://docs.docker.com/compose/completion/) * <br>
 
 ## install some tools on ubuntu image
 *update apt-get index* <br>
