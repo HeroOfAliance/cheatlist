@@ -122,10 +122,10 @@ ping container __webhost_2__ from the __webhost_1__ <br>
 
 get docker ussage info <br>
 `docker system df` <br>
-remove all detached images <br>
+remove all __<none>__ images <br>
 `docker image prune` <br>
 remove everything <br>
-`docker images prune` <br>
+`docker system prune` <br>
 
 
 ## docker file 
