@@ -11,9 +11,10 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 good replacement for the standard mac terminal [link](https://www.iterm2.com/) <br>
 
 ## install command line completion
-absolutely necessary thing [link](https://docs.docker.com/compose/completion/) <br>
+absolutely necessary thing [official docker's doc](https://docs.docker.com/compose/completion/) <br>
 
 step by step if standart doc doesn't work for you: <br>
+* you should install brew if you have not already done so [link](https://brew.sh)
 * install bash completion `brew install bash-completion`
 * open bash profile `nano ~/.bash_profile`
 * copy this text there:
