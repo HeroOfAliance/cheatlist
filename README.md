@@ -8,10 +8,24 @@ please ping me if you find something really stupid here [mail](mailto:alan.dayne
 * [ununtu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## iTerm2
-*good replacement for the standard mac terminal [link](https://www.iterm2.com/) * <br>
+good replacement for the standard mac terminal [link](https://www.iterm2.com/) <br>
 
 ## install command line completion
- *absolutely necessary thing [link](https://docs.docker.com/compose/completion/) * <br>
+absolutely necessary thing [link](https://docs.docker.com/compose/completion/) <br>
+
+step by step if standart doc doesn't work for you: <br>
+* install bash completion `brew install bash-completion`
+* open bash profile `nano ~/.bash_profile`
+* copy this text there:
+ ```
+ if [ -f $(brew --prefix)/etc/bash_completion ]; then
+ . $(brew --prefix)/etc/bash_completion
+ fi
+ ```
+* press `control + O` and `enter`
+* restart bash session `source ~/.bash_profile`
+* install docker completion `brew install docker-completion`
+* Hurray! You did it. Just restart your terminal.
 
 ## install some tools on ubuntu image
 *update apt-get index* <br>
