@@ -155,9 +155,21 @@ RUN apt-get update \
 # this statement is optional
 EXPOSE 80 443
 
-# this command will be running on container start
+# set current work dir to avoid cd .. stuff 
+WORKDIR /usr/src/app
+
+# copy source file to the destination
+COPY source.file destination.file
+
+# copy everything from current client folder to the current WORKDIR
+COPY . .
+
+# add dirrectory ./public from host to the container
+ADD ./public ./public
+
+# this command will be running on container's start
 # keep in mind, that only one command will be running
-# so if there more than one 
+# so docker will exec only the latest one
 CMD ["nginx", "-g", "daemon off;"]
 
 ```
