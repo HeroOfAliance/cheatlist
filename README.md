@@ -130,6 +130,8 @@ remove all __\<none\> (dangling)__ images, unused networks, detached volumes and
 `docker system prune` <br>
 remove all unused images, unused networks, detached volumes, stopped containers and build cache<br>
 `docker system prune -a` <br>
+remove all stopped containers <br>
+`docker container prune` <br>
 
 ## docker file 
 
