@@ -122,11 +122,14 @@ ping container __webhost_2__ from the __webhost_1__ <br>
 
 get docker ussage info <br>
 `docker system df` <br>
-remove all __\<none\>__ images <br>
+remove all __\<none\> (dangling)__ images <br>
 `docker image prune` <br>
-remove everything <br>
+remove all images that are nout in use right now<br>
+`docker image prune -a` <br>
+remove all __\<none\> (dangling)__ images, unused networks, detached volumes and stopped containers <br>
 `docker system prune` <br>
-
+remove all unused images, unused networks, detached volumes, stopped containers and build cache<br>
+`docker system prune -a` <br>
 
 ## docker file 
 
