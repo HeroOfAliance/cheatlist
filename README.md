@@ -174,4 +174,9 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ```
 <br>
--f to specify file to build 
+
+## build an image
+
+build custom image from Dockerfile <br>
+-f to specify file to build <br>
+`docker build -t path/to/dockerfile .` <br>
