@@ -1,16 +1,20 @@
 # Doker Cheatlist
 my own docker cheats <br>
-please ping me if you find something really stupid here [mail](mailto:alan.dayne@gmail.com)
+
+*please ping me if you find something really stupid here* [mail](mailto:alan.dayne@gmail.com)
 
 ## get docker
+
 * [mac](https://docs.docker.com/docker-for-mac/install/) 
 * [win](https://docs.docker.com/docker-for-windows/install/) 
 * [ununtu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 ## iTerm2
+
 good replacement for the standard mac terminal [link](https://www.iterm2.com/) <br>
 
 ## install command line completion
+
 absolutely necessary thing [official docker's doc](https://docs.docker.com/compose/completion/) <br>
 
 step by step if standart doc doesn't work for you: <br>
@@ -29,6 +33,7 @@ step by step if standart doc doesn't work for you: <br>
 * Hurray! You did it. Just restart your terminal.
 
 ## install some tools on ubuntu image
+
 update apt-get index <br>
 `apt-get update` <br>
 install __curl__ <br>
@@ -39,12 +44,14 @@ install __ping__ <br>
 `apt-get install iputils-ping` <br>
 
 ## basic 
+
 print versions of installed docker client and server <br>
 `docker version` <br>
 print docker configuration <br>
 `docker info` <br>
 
 ## container
+
 run detached container with name __webhost__ from the __nginx__ image and forward __8080__ port of the host to the __80__ port of the container <br>
 `docker container run --publish 8080:80 --detach --name webhost nginx` <br>
 `docker container run -p 8080:80 -d --name webhost nginx` <br>
@@ -76,6 +83,7 @@ run container from the __centos__ image, exec __curl__ command on the __google__
 `docker container run --rm centos curl https://www.google.com` <br>
 
 ## image
+
 get a list of pulled images <br>
 `docker image ls` <br>
 remove cached images __centos__, __ubuntu__ and __nginx__ <br>
@@ -98,6 +106,7 @@ pull image __avalonxt/nginx:latest__ from the docker hub <br>
 `docker pull avalonxt/nginx:latest` <br>
 
 ## network
+
 get a list of all networks <br>
 `docker network ls` <br>
 get configuraion of the network with name __bridge__ (in addition contains a list of connected containers) <br>
@@ -117,6 +126,11 @@ run container __webhost_1__ and connect it to the __my_network__ and assign alia
 `docker container run -d --name webhost_1 --net my_network --net--alias webhost nginx:alpine` <br>
 ping container __webhost_2__ from the __webhost_1__ <br>
 `docker container exec webhost_1 ping webhost_2` <br>
+
+## volumes 
+
+clean all detached volumes
+`docker volume prune` <br>
 
 ## keep everything clean
 
@@ -179,4 +193,5 @@ CMD ["nginx", "-g", "daemon off;"]
 
 build custom image from Dockerfile <br>
 -f to specify file to build <br>
+__dont forget to put dot in the end!__ <br>
 `docker build -t path/to/dockerfile .` <br>
