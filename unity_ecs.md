@@ -1,5 +1,21 @@
+### IComponentData example
 
-### JobComponentSystem base
+``` cs
+using Unity.Entities;
+using Unity.Transforms;
+
+// this line will allow attach script in the editor
+[GenerateAuthoringComponent]
+public struct PlanetData : IComponentData
+{
+    public Translation target;
+    public float speed;
+}
+
+```
+
+
+### JobComponentSystem example
 
 ``` cs
   using Unity.Entities;
@@ -132,7 +148,7 @@ public class ECSManager : MonoBehaviour
 ### Orbit around pivot
 
 ``` cs
-            var pivot = planetData.target.Value;
+            float3 pivot = planetData.target.Value;
             position.Value = math.mul(quaternion.AxisAngle(new float3(0, 1, 0), deltaTime * planetData.speed), 
                   position.Value - pivot) + pivot;
 ```
